@@ -29,10 +29,12 @@ public class Demo {
 */
 
 
+
 public class Demo {
     public static void main(String[] args){   
     	
-//    	Set<Integer> nums=new HashSet<Integer>();  	
+//    	Set<Integer> nums=new HashSet<Integer>();  	//Set is an interface which extends Collection
+													// but the class which implements Set is 'HashSet'
 //    	Set<Integer> nums=new TreeSet<Integer>();
     	Collection<Integer> nums=new TreeSet<Integer>();
     	nums.add(62);
@@ -42,7 +44,7 @@ public class Demo {
     	
     	//nums.add("5");
     	
-    	Iterator<Integer> values = nums.iterator();
+    	Iterator<Integer> values = nums.iterator(); //Important Thing
     	
     	while(values.hasNext())
     		System.out.println(values.next());
@@ -55,7 +57,8 @@ public class Demo {
 }
 
 
-
+//Facts
+//1. 'Collection' Interface extends Iterable
 
     
 
