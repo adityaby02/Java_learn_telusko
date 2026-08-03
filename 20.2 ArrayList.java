@@ -6,8 +6,10 @@ public class Demo {
     public static void main(String[] args){   
     	
 //    	Collection<Integer> nums= new ArrayList<Integer>();
-//  	Collection nums=new ArrayList();
+//  	Collection nums=new ArrayList(); //This does not specify the type of elements in 'nums'
     	List<Integer> nums=new ArrayList<Integer>();
+		// -> Its a good practice to wirte <> thing so that we can get error (if any) only during compile 
+		// time and not during runtime
     	nums.add(6);
     	nums.add(5);
     	nums.add(8);
@@ -22,7 +24,7 @@ public class Demo {
 //    	{
 //    		System.out.println(nums);	
 //    	}
-    	for(Object n:nums)
+    	for(Object n:nums) //Since Integer extends Object class, we can also write it like this
     	{
     		int num=(Integer)n;
     		System.out.println(nums);	
