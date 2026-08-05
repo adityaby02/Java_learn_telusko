@@ -39,7 +39,7 @@ public class Demo {
     	
 //    	Stream<Integer> sortedValues = nums.stream()
 //    			.filter(n-> n%2==0)
-//    			.sorted();
+//    			.sorted();  // returns the stream of values in the sorted manner
     	
     	Stream<Integer> sortedValues = nums.parallelStream()
     			.filter(n-> n%2==0)
