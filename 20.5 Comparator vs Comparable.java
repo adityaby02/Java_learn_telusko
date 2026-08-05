@@ -28,24 +28,31 @@ class Student
 //		else
 //			return -1;
 //	}
+//  Note (Imp)-> The above code can be used if 'Student' would have been implementing Comparable interface
+//               and then we could write Collections.sort(studs), instead of Collections.sort(studs, com)
 }
 	
 
 public class Demo {
     public static void main(String[] args){   
     	
-//    	Comparator<Integer> com=new Comparator<Integer>()
+//    	Comparator<Integer> com=new Comparator<Integer>() // Here we are using Anonymous inner class
+															// (look 13.3)
 //    	{
-//    		public int compare(Integer i,Integer j)
+//    		public int compare(Integer i,Integer j) //compare is already an existing func inside Comparator interface
 //    		{
 //    			if(i%10 >j%10)
-//    				return 1;
+//    				return 1;  // 1 means we need to swap
 //    			else
-//    				return -1;
+//    				return -1; // means we need not to swap
 //    		}
-//    	};	
+//    	};
+// 		Note-> 1. Comparator is a interface
     	
 //    	List<Integer> nums= new ArrayList<>();
+		// Note-> Here in the RHS it is not necessary to put <Integer>, instead just <> works
+		//        coz, in the LHS we have already specified <Integer>
+
 //    	nums.add(43);
 //    	nums.add(31);
 //    	nums.add(72);
@@ -63,6 +70,7 @@ public class Demo {
 //    	};	
     	
     	Comparator<Student> com=(i,j) -> i.age > j.age?1:-1;
+		// Note-> Lambda expression of the code from line 61
      	
     	List<Student> studs= new ArrayList<>();
     	studs.add(new Student(21,"Navin"));
@@ -71,12 +79,17 @@ public class Demo {
     	studs.add(new Student(20,"Kiran"));
     	
 //    	Collections.sort(nums);
+// 		Note-> Collections is a class
+
+// 		Collections.sort(nums, com); -> To sort according to the comparator 'com'
+
 //    	System.out.println(nums);
     	
     	for(Student s:studs)
     		System.out.println();
     	
-    	Collections.sort(studs);
+    	// Collections.sort(studs); -> Error, Look at line 31
+
     	for(Student s: studs)
     		System.out.println(s);
     }

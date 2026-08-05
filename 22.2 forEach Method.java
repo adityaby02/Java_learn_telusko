@@ -15,13 +15,18 @@ public class Demo {
 //    			System.out.println(n);
 //    		}
 //    	};
+
+ //   	nums.forEach(con); // You can also use this form of .forEach funcn, but first u have
+ // 	to write the Consumer anonymous inner object in line 11
     	
-    	Consumer<Integer> con= n -> System.out.println(n);
+    	Consumer<Integer> con= n -> System.out.println(n); // Lambda expression for line 11
  
-    	nums.forEach(n -> System.out.println(n));
+    	nums.forEach(n -> System.out.println(n)); //Earlier example, (if u observe it is basically the short
+		//                                          of line 19 & 22, u just omit con and just right the RHS
+		//											of line 22)
    
  //  	nums.forEach(null);
- //   	nums.forEach(con);
+
     	
     	
     	//nums.forEach(n -> System.out.println(n));

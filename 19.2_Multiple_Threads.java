@@ -20,7 +20,7 @@ class B extends Thread
 	}
 }
 
-public class Demo {
+public class 19.2_Multiple_Threads {
     public static void main(String[] args) throws NumberFormatException {   
     	
     	A obj1=new A();

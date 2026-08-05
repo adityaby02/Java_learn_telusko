@@ -6,6 +6,8 @@ public class Demo {
     public static void main(String[] args){   
     	
     	List<Integer> nums= Arrays.asList(4,5,7,3,2,6);
+		// Note (Imp)-> The above code declares as well as stores the values in the List, quite useful
+		// here asList is a method inside Arrays class
     	
 //    	for(int i=0;i<nums.size();i++)
 //    	{
@@ -19,7 +21,8 @@ public class Demo {
 //    	}
     	
     	nums.forEach(n -> System.out.println(n));
-    	
+    	// Note (Imp)--> forEach method-> Even better way to print the elements in 'nums' list, than
+		// the code written on line 12 and 18
     	
     	int sum=0;
     	for(int n:nums)
